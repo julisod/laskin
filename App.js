@@ -8,7 +8,6 @@ export default function App() {
   const [firstInput, setFirstInput] = useState("");
   const [secondInput, setSecondInput] = useState("");
 
-  /* const [text, setText] = useState(); */
   const [data, setData] = useState([]);
 
   const add = () => {
@@ -20,8 +19,7 @@ export default function App() {
   const subtract = () => {
     let subtraction = parseInt(firstInput) - parseInt(secondInput)
     setResult(subtraction);
-    setText(firstInput + " - " + secondInput + " = " + subtraction);
-    handleChange();
+    handleChange(firstInput + " - " + secondInput + " = " + subtraction);
   }
 
   const handleChange = (text) => {
