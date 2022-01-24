@@ -23,7 +23,7 @@ export default function App() {
   }
 
   const handleChange = (text) => {
-    setData([...data, { key: text }]);
+    setData([...data, text]);
     setFirstInput("");
     setSecondInput("");
   }
@@ -57,7 +57,7 @@ export default function App() {
         <Text style={{ fontSize: 22 }}>History</Text>
         <FlatList
           data={data}
-          renderItem={({item}) => <Text>{item.key}</Text>}
+          renderItem={({item}) => <Text>{item}</Text>}
           keyExtractor={(item, index) => index.toString()}/>
       </View>
     </View>
